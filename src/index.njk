@@ -1,0 +1,205 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- ===== Top bar ===== -->
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <span>{{ site.phone }} &nbsp;·&nbsp; {{ site.email }}</span>
+    <nav class="social">
+      <!--
+      <a href="{{ site.social.facebook }}" aria-label="Facebook">FB</a>
+      <a href="{{ site.social.instagram }}" aria-label="Instagram">IG</a>
+      <a href="{{ site.social.linkedin }}" aria-label="LinkedIn">IN</a>
+      -->
+    </nav>
+  </div>
+</div>
+
+<!-- ===== Header / nav ===== -->
+<header class="header">
+  <div class="wrap header__inner">
+    <a href="#inicio" class="logo">
+      <img src="/assets/img/inmaca-logo.jpg" alt="{{ site.company }}" class="logo__img">
+    </a>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#empresa">Nuestra Empresa</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contáctenos</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section id="inicio" class="hero">
+  <div class="wrap hero__inner hero__inner--2col">
+    <div class="hero__img-col">
+      <img src="/assets/img/inmaca.jpg" alt="{{ site.company }}" class="hero__logo-img">
+    </div>
+    <div class="hero__content-col">
+      <h1 class="hero__title">{{ site.company }}</h1>
+      <p class="hero__lead">{{ site.tagline }}</p>
+      <a href="#proyectos" class="btn btn--accent">Ver nuestros proyectos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="empresa" class="about">
+  <br/>
+  <div class="wrap grid grid--2">
+    <div>
+      <h2 class="section-title">INMACA</h2>
+      <h3>Quiénes somos</h3>
+      <p>{{ site.about.quienes }}</p>
+      <!--h3>Misión</h3>
+      <p>{{ site.about.mision }}</p>
+      <h3>Visión</h3>
+      <p>{{ site.about.vision }}</p-->
+    </div>
+    <div class="stats">
+      {% for stat in site.stats %}
+      <div class="stat">
+        <span class="stat__value">{{ stat.value }}</span>
+        <span class="stat__label">{{ stat.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section id="proyectos" class="projects">
+  <br/>
+  <div class="wrap">
+    <h2 class="section-title">Proyectos</h2>
+    <div class="grid grid--3">
+      {% for p in site.projects %}
+      <article class="project" role="button" tabindex="0" aria-label="Ver descripción de {{ p.name }}">
+        <div class="project__inner">
+          <div class="project__front">
+            <div class="project__img" style="background-image:url('{{ p.image }}')"></div>
+            <div class="project__body">
+              <h3>{{ p.name }}</h3>
+              {% if p.location %}<p>{{ p.location }}</p>{% endif %}
+            </div>
+          </div>
+          <div class="project__back">
+            <h3>{{ p.name }}</h3>
+            {% if p.location %}<p class="project__back-location">{{ p.location }}</p>{% endif %}
+            {% if p.desc %}<p class="project__back-desc">{{ p.desc }}</p>{% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="services">
+  <br/>
+  <div class="wrap">
+    <h2 class="section-title">Nuestros servicios</h2>
+    <div class="grid grid--4">
+      {% for s in site.services %}
+      <article class="service">
+        <div class="service__icon"><i data-lucide="{{ s.icon }}"></i></div>
+        <h2>{{ s.title }}</h2>
+        <br/>
+        <p>{{ s.desc }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="cta-band">
+      <p>¿Desea contactarnos?</p>
+      <a href="#contacto" class="btn btn--ghost">Contactenos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Members / Nosotros ===== -->
+<section id="nosotros" class="members">
+  <br/>
+  <div class="wrap">
+    <h2 class="section-title">Nosotros</h2>
+    <div class="grid grid--2 members__grid">
+      {% for m in site.team %}
+      <article class="member-card">
+        <div class="member-card__photo" style="background-image:url('{{ m.photo }}')"></div>
+        <div class="member-card__body">
+          <h3>{{ m.name }}</h3>
+          <p class="member-card__title">{{ m.title }}</p>
+          <p class="member-card__bio">{{ m.bio }}</p>
+          <a href="/equipo/{{ m.slug }}/" class="btn btn--accent member-card__cta">Ver perfil completo</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== Rental equipment ===== -->
+<!--
+<section id="equipo" class="equip">
+  <br/>
+  <div class="wrap equip__inner">
+    <h2 class="section-title section-title--light">Nuestro equipo</h2>
+    <p>Contamos con una amplia variedad de equipo pesado para su construcción: rastras, volquetas, camiones y más.</p>
+    <a href="#contacto" class="btn btn--accent">Rentar equipo</a>
+  </div>
+</section>
+-->
+
+<!-- ===== Divider ===== -->
+<div class="divider">
+  <div class="wrap divider__inner">
+    <span class="divider__line"></span>
+    <span class="divider__icon"><i data-lucide="phone"></i></span>
+    <span class="divider__icon"><i data-lucide="mail"></i></span>
+    <span class="divider__line"></span>
+  </div>
+</div>
+
+<!-- ===== Contact ===== -->
+<section id="contacto" class="contact">
+  <div class="wrap grid grid--2">
+    <div>
+      <h2 class="section-title">Contáctenos</h2>
+      <form action="https://formspree.io/f/{{ site.formspreeId }}" method="POST" class="form">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="tel" name="telefono" placeholder="Teléfono">
+        <textarea name="mensaje" rows="5" placeholder="Déjenos un mensaje" required></textarea>
+        <button type="submit" class="btn btn--accent">Enviar mensaje</button>
+      </form>
+    </div>
+    <div class="contact__info">
+      <h3>Teléfono</h3>
+      <p class="contact__phone">{{ site.phone }}</p>
+      <h3>Dirección</h3>
+      <p>{{ site.address }}</p>
+      <h3>Correo</h3>
+      <p>{{ site.email }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <p>&copy; {{ "2026" | default('') }} {{ site.company }}. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.project').forEach(function(card) {
+    function toggle() { card.classList.toggle('is-flipped'); }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+</script>
