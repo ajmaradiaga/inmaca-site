@@ -5,32 +5,9 @@ permalink: /equipo/jose/
 
 {% set member = site.team[1] %}
 
-<!-- ===== Top bar ===== -->
-<div class="topbar">
-  <div class="wrap topbar__inner">
-    <span>{{ site.phone }} &nbsp;·&nbsp; {{ site.email }}</span>
-    <nav class="social">
-      <a href="{{ site.social.facebook }}" aria-label="Facebook">FB</a>
-      <a href="{{ site.social.instagram }}" aria-label="Instagram">IG</a>
-      <a href="{{ site.social.linkedin }}" aria-label="LinkedIn">IN</a>
-    </nav>
-  </div>
-</div>
+{% include "partials/topbar.njk" %}
 
-<!-- ===== Header / nav ===== -->
-<header class="header">
-  <div class="wrap header__inner">
-    <a href="/" class="logo">{{ site.company }}</a>
-    <nav class="nav">
-      <a href="/">Inicio</a>
-      <a href="/#empresa">Nuestra Empresa</a>
-      <a href="/#proyectos">Proyectos</a>
-      <a href="/#nosotros">Nosotros</a>
-      <a href="/#equipo">Alquiler de equipo</a>
-      <a href="/#contacto">Contáctenos</a>
-    </nav>
-  </div>
-</header>
+{% include "partials/header.njk" %}
 
 <!-- ===== Profile ===== -->
 <section class="profile">
@@ -55,9 +32,4 @@ permalink: /equipo/jose/
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
-<footer class="footer">
-  <div class="wrap">
-    <p>&copy; 2026 {{ site.company }}. Todos los derechos reservados.</p>
-  </div>
-</footer>
+{% include "partials/footer.njk" %}
