@@ -73,14 +73,20 @@ export default {
 
   projects: [
     {
-      name: "Casa de Campo",
+      name: "Residencial Montemar Tres Arroyos",
+      location: "San Lorenzo, Valle",
+      image: "/assets/img/proyectos/residencial-montemar.jpg",
+      desc: "Diseño y construcción de vivienda residencial en zona montañosa. Incluye planificación arquitectónica, presupuesto y ejecución completa.",
+    },
+    {
+      name: "Casa residencial",
       location: "Valle de Angeles, Francisco Morazan",
       image: "/assets/img/proyectos/casa-1.jpg",
       desc: "Diseño y construcción de vivienda residencial en zona montañosa. Incluye planificación arquitectónica, presupuesto y ejecución completa.",
     },
     {
-      name: "Casa de Campo",
-      location: "Valle de Angeles, Francisco Morazan",
+      name: "Vivienda unifamiliar",
+      location: "Santa Ana, Francisco Morazan",
       image: "/assets/img/proyectos/casa-2.jpg",
       desc: "Residencia de campo con acabados de alta calidad. Supervisión integral desde cimientos hasta entrega final al cliente.",
     },
@@ -121,8 +127,8 @@ export default {
       desc: "Proyecto de 164 habitaciones, spa y centro de convenciones.",
     },
     {
-      name: "Granja Penal Porvenir",
-      location: "Atlantida, Honduras",
+      name: "Granja Penal El Porvenir",
+      location: "El Porvenir, Francisco Morazan",
       image: "/assets/img/proyectos/penal-porvenir.jpg",
       desc: "Granja penal con capacidad para 500 reclusos. Incluye áreas de alojamiento, talleres, áreas verdes y sistemas de seguridad perimetral.",
     },
@@ -134,7 +140,7 @@ export default {
       name: "Carlos Andrés Maradiaga Carrillo",
       title: "Ingeniero Civil",
       photo: "/assets/img/team-carlos.jpg",
-      bio: "Ingeniero Civil egresado de UNITEC en 2012. Contratista independiente con experiencia en planificación, diseño, presupuesto, ejecución y supervisión de proyectos residenciales, urbanizaciones, saneamiento básico e infraestructura social.",
+      bio: "Ingeniero Civil con master en Building Information Modeling (BIM). Contratista independiente con experiencia en planificación, diseño, presupuesto, ejecución y supervisión de proyectos residenciales, urbanizaciones, saneamiento básico e infraestructura social.",
       experience: [
         "Contratista independiente desde diciembre de 2019 a la actualidad.",
         "Planeación, diseño y ejecución de proyectos de vivienda.",
