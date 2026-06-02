@@ -202,7 +202,7 @@ section { padding: 5rem 0; }
   flex-direction: column;
 }
 .member-card__photo {
-  height: 300px;
+  height: 400px;
   background-size: cover;
   background-position: center top;
   background-color: var(--paper-2);
