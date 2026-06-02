@@ -184,6 +184,8 @@ section { padding: 5rem 0; }
 .form button { align-self: flex-start; cursor: pointer; }
 .contact__info h3 { margin: 1.5rem 0 0.3rem; color: var(--accent-dark); }
 .contact__phone { font-family: "Archivo", sans-serif; font-weight: 900; font-size: 1.6rem; }
+.contact__whatsapp { display: inline-flex; align-items: center; gap: 0.4rem; color: #25D366; text-decoration: none; }
+.contact__whatsapp:hover { color: #128C7E; }
 
 /* ===== Footer ===== */
 .footer { background: var(--concrete); color: var(--paper-2); padding: 2rem 0; font-size: 0.85rem; }
