@@ -6,7 +6,7 @@ export default {
   tagline:
     "Construimos proyectos con experiencia, responsabilidad y visión de futuro.",
   phone: "+504 3303-0303",
-  email: "carlos@inmaca.com",
+  email: "info@inmaca.com",
   address:
     "Tegucigalpa, Honduras, C.A.",
 
